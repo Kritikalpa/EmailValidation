@@ -1,12 +1,23 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
-namespace EmailValidation
+namespace PincodeRegex
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to email validation problem");
+            Console.WriteLine("Enter the Email");
+            string pinCode = Console.ReadLine();
+            Regex reEmail = new Regex(@"^([a-z0-9][a-z0-9.+_-]*)$");
+            if (reEmail.IsMatch(pinCode.ToString()))
+            {
+                Console.WriteLine("Valid Email");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Email");
+            }
         }
     }
 }
