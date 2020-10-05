@@ -8,9 +8,9 @@ namespace PincodeRegex
         static void Main(string[] args)
         {
             Console.WriteLine("Enter the Email");
-            string pinCode = Console.ReadLine();
+            string emailId = Console.ReadLine();
             Regex reEmail = new Regex(@"^([a-z0-9][a-z0-9.+_-]*@([a-z0-9]([a-z0-9-]*[a-z])?\.?){1,2}([a-z]{2})?)$");
-            if (reEmail.IsMatch(pinCode.ToString()))
+            if (reEmail.IsMatch(emailId))
             {
                 Console.WriteLine("Valid Email");
             }
